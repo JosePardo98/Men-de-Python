@@ -1,5 +1,35 @@
 import math
 #Menu de Funciones en Python
+def factoriales():
+    while True:
+        try:
+            num_a_desear = int(input("ingrese un numero para saber su factorial: "))
+            break
+        except:
+            print("ingrese un dato numerico porfavor!")
+    num_factorial = 1
+    for i in range(1, num_a_desear + 1):
+        num_factorial = num_factorial * i
+        print(f"{i} * {num_factorial}")
+    
+def tablas_multiplicar():
+    while True:
+        try:
+            opc = int(input("escoga la tabla de multiplicar que desee del 1 al 10: \n"))
+            if(opc == 0):
+                print("es necesario ingresar un numero que se pueda multiplicar")
+                continue
+            break
+        except:
+            print("ingrese un dato numerico ")
+    if(opc <= 10):
+        for i in range(1, 10 + 1, 1):
+            resultado = opc * i
+            print(f"{opc} * {i} = {resultado}")
+    else:
+        print("gracias")
+
+
 def calculo_cubo_cuadrado():
     while True:
         try:
